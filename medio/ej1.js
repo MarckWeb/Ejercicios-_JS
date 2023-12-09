@@ -20,4 +20,14 @@ function largestOfFour(arr) {
 const result = largestOfFour([[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], [-72, -3, -17, -10]]);
 console.log(result) //[25, 48, 21, -3]
 
+//otra forma de resolver 
+
+function largestOfFour(arr) {
+   if (!arr) return console.info('ingresa un array de arrays.');
+   const resultArray = arr.map(element => element.reduce((acc, current) => Math.max(acc, current)));
+   return resultArray;
+}
+
+const result2 = largestOfFour([[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], [-72, -3, -17, -10]]);
+console.log(result2); //[25, 48, 21, -3]
 
