@@ -43,4 +43,39 @@ function factorialize(num) {
 }
 
 const resultFactorialize = factorialize(0);
-console.log(resultFactorialize)
+//console.log(resultFactorialize)
+
+//4-. Devuelve la longitud de la palabra más larga en la oración proporcionada. Tu respuesta debe ser un número.
+
+function findLongestWordLength(str) {
+   if (typeof str === 'number') return console.info('ingresa un texto enves de numeros')
+   let converterArray = str.split(' ')
+   let reducir = converterArray.reduce((acc, valorActual) => {
+      return Math.max(acc, valorActual.length)
+   }, 0)
+   console.log(reducir)
+   let strLarge = 0
+   for (i = 0; i < converterArray.length; i++) {
+      if (converterArray[i].length > strLarge) {
+         strLarge = converterArray[i].length
+      }
+   }
+   return strLarge;
+}
+//findLongestWordLength(12233)
+//findLongestWordLength("The quick brown fox jumped over the lazy dog");
+console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog"))
+
+
+function nose(max = 1, palabra = 'hola mundo entero ls') {
+   let array = palabra.split(' ')
+   var maxLength = array.reduce((max, elemento) => {
+      console.log(max)
+      console.log(elemento)
+      return Math.max(max, elemento.length);
+   }, 0);
+
+   console.log(maxLength)
+}
+
+nose()
