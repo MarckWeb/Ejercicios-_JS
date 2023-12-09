@@ -1,0 +1,46 @@
+//1-. convertir grados Cº a Fº
+function convertCtoF(celsius) {
+   if (typeof celsius !== 'number') return console.error('el valor debe ser numerico')
+   let fahrenheit = (celsius * 9 / 5) + 32;
+   return fahrenheit;
+}
+const resultado = convertCtoF(0);
+//console.log(resultado)
+
+//2-. Invertir la cadena proporcionada y devolver la cadena invertida. Por ejemplo, "hello" debe convertirse "olleh".
+
+function reverseString(str) {
+   //si str no esta declarado
+   if (!str) return console.error('ingresa una cadena de texto')
+   //si str es de tipo numero
+   if (typeof str === 'number') str = str.toString()
+
+   // let reverseString = ''
+   // for (let i = str.length - 1; i >= 0; i--) {
+   //    reverseString += str[i]
+   // }
+   str = [...str].reverse().join('')
+   return str;
+}
+
+let resultReverse = reverseString(12345);
+//console.log(resultReverse)
+
+/* 3-. Devuelve el factorial del entero proporcionado.
+Si el número entero es representado con la letra n, un factorial es el producto de todos los enteros positivos menores o iguales a n.
+Los factoriales suelen representarse con la abreviatura n!
+Por ejemplo: 5! = 1 * 2 * 3 * 4 * 5 = 120
+Sólo se proporcionarán a la función los enteros mayores o iguales a cero.*/
+
+function factorialize(num) {
+   if (typeof num !== 'number') return console.warn('debes ingresar un numero')
+   let fact = 1
+   for (i = 1; i <= num; i++) {
+      fact = fact * i
+   }
+   num = fact
+   return num
+}
+
+const resultFactorialize = factorialize(0);
+console.log(resultFactorialize)

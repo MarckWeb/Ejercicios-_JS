@@ -207,10 +207,6 @@ const numDivisible = (numero) => {
 // numDivisible(4)
 
 
-
-
-
-
 // 13-. Desarrolla una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
 const numeros = (numero) => {
     if (!numero) return console.warn('No ingresaste un numero')
