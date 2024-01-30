@@ -32,9 +32,25 @@ const arrayMinYMax = (array) => {
    return result
 }
 
-console.log(arrayMinYMax([1, 4, 5, 99, -60]))
+//console.log(arrayMinYMax([1, 4, 5, 99, -60]))
 
-arrayMinYMax([1, 4, 5, 99, -60])
+//arrayMinYMax([1, 4, 5, 99, -60])
 
 
 // 23) Programa una función que dado un array de números devuelva un objeto con 2 arreglos en el primero almacena los números pares y en el segundo los impares, pe. miFuncion([1,2,3,4,5,6,7,8,9,0]) devolverá {pares: [2,4,6,8,0], impares: [1,3,5,7,9]}.
+
+const devolverArrayParImpar = (array) => {
+   let objetoDeArrays = { pares: [], impares: [] }
+   for (i = 0; i < array.length; i++) {
+      if (i % 2 !== 0) {
+         objetoDeArrays.pares.push(array[i])
+      } else {
+         objetoDeArrays.impares.push(array[i])
+      }
+
+   }
+   return objetoDeArrays
+}
+
+console.log(devolverArrayParImpar([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))
+devolverArrayParImpar([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
